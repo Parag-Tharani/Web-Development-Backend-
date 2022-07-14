@@ -1,0 +1,12 @@
+# MongoDB 1st Assignment
+
+
+ 1. db.UserData.find({gender:"Male"}).pretty()
+ 2. db.UserData.find({id:{$mod:[2,0]}}).pretty()
+ 3. db.UserData.find({native:"Japan"}).pretty()
+ 4  db.UserData.find({gender:"Female",native:"India"}).pretty()
+ 5. db.UserData.find({age:{ $gt: 25 }}).pretty() 
+ 6. db.UserData.find({age:{ $lt: 50 }, native: "United States"}).pretty()
+ 7. db.UserData.find({relocate_to: "France"}).count()
+ 8. db.UserData.find({native:"United States", relocate_to:"Russia"}).sort({age:1}).pretty()
+ 9. db.UserData.find().sort({family_members:1, age:-1}).pretty()
