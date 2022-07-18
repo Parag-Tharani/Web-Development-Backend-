@@ -1,0 +1,12 @@
+#Mongo
+
+1. db.cars.find({gender:"Male", car_color:"Pink"}).pretty()
+2. db.cars.find({gender:"Female", $or:[{car_color:"Red"},{car_color:"Blue"}]}).pretty()
+3. db.cars.find({gender:"Male", purchase_year:"1998"}).pretty()
+4. db.cars.find({gender:"Female", car_color:"Yellow", purchase_year:"1985"}).pretty()
+5. db.cars.find({ $and:[ { $or:[{country:"Germany"},{country:"Kenya"}] }, { $or:[ {car_color:"Red"}, {car_color:"Green"} ]} ] }).pretty()
+6. db.cars.find({country:"India", purchase_year:"2001"}).pretty()
+7. db.cars.find({ $and: [{ $or:[{country:"Egypt"},{country:"Germany"}] }, { $or:[ {purchase_year:"1992"},{purchase_year:"1998"}] }] }).pretty()
+8. db.cars.find({gender:"Female", country:"India", car_color:"Blue"}).pretty()
+9. db.cars.find({ $and : [{gender:"Male", country:"Germany", purchase_year:"1998"}, {gender:"Male", country:"Egypt", purchase_year:"1992"} ] }).pretty()
+10. db.cars.find({ gender:"Female", car_color:"Green", country:{ $ne:"Pakistan" } }).pretty()

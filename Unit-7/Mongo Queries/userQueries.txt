@@ -1,0 +1,12 @@
+#Mongo 
+
+1. db.users.find({ gender:"Female" }).pretty()
+2. db.users.find({ gender:"Female", $or:[ {language:"Hindi"}, {language:"Kannada"} ] }).pretty()
+3. db.users.find({ $or:[ {gender:"Male", language:"Hindi"}, {gender:"Female", language:"Kannada"} ] }).pretty()
+4. db.users.find({ shirt_size:"S" }).pretty()
+5. db.users.find({ gender:"Female", shirt_size:"XL" }).pretty()
+6. db.users.find({ $or:[ {gender:"Male", language:"English"}, {gender:"Female", language:"Hindi"} ] }).pretty()
+7. db.users.find({ $or:[ {gender:"Male", $or:[ {language:"English"}, {language:"Hindi"}]}, {gender:"Female", $or:[ {language:"Kannada"}, {language:"German"}]} ]}).pretty()
+8. db.users.find({ $or:[ {gender:"Male", $or:[ {shirt_size:"L"}, {shirt_size:"M"}]}, {gender:"Female", language:"Bengali"} ]}).pretty()
+9. db.users.find({ gender:"Female", language:{$in:["Hindi", "Punjabi", "Bengali", "Gujrati", "Tamil", "Malayalam"]} }).pretty()
+10. db.users.find({ gender:"Male", language:"Korean" }).pretty()
